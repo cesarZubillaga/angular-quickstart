@@ -9,11 +9,13 @@ import {StudentService} from '../student/student.service';
 
 export class DashboardComponent implements OnInit {
     students: Student[];
+
     constructor(private studentService: StudentService) {
     }
+
     ngOnInit(): void {
         this.studentService.getStudents().then(
             students => this.students = students.slice(0, 1)
-            );
+        );
     }
 }

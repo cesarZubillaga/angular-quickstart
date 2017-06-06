@@ -4,6 +4,7 @@ import {Student} from './student';
 @Injectable()
 export class StudentService {
     student: Student;
+
     getStudents(): Promise<Student[]> {
         return Promise.resolve([
             {
@@ -20,10 +21,16 @@ export class StudentService {
             },
         ]);
     }
+
+    getStudent(id: number): Promise<Student> {
+        return this.getStudents().then( students => students.find( student => student.id === id ));
+    }
+
     setActiveStudent(student: Student) {
         console.log('StudentService=>setActiveStudent');
         this.student = student;
     }
+
     getActiveStudent() {
         return this.student;
     }

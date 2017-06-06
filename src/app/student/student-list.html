@@ -1,0 +1,18 @@
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Score</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let student of students" class.selected="student === selectedStudent">
+        <td>{{student.id}}</td>
+        <td>{{student.name }}</td>
+        <td>{{student.email }}</td>
+        <td>{{student.score}}</td>
+        <td>
+            <a class="btn btn-success" [routerLink]="['/students', student.id]">View</a>
+        </td>
+    </tr>
+</table>
