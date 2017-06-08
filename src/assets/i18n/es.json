@@ -1,6 +1,12 @@
 {
-  "STUDENTS": "Estudiantes",
-  "DASHBOARD": "Panel de Control",
+  "Students": "Estudiantes",
+  "Dashboard": "Panel de Control",
+  "Name" : "Nombre",
+  "Email" : "Email",
+  "Score" : "Puntuación",
+  "Action" : "Acción",
+  "View": "Ver",
+  "Back": "Volver",
   "APLICATION_NAME": "Aplicación",
   "ROUTES.dashboard": "panel-de-control",
   "ROUTES.students": "estudiantes"

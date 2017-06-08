@@ -1,0 +1,10 @@
+<div class="row">
+    <h1>{{'APLICATION_NAME' | translate}}</h1>
+    <a [routerLink]="['/students']| localize"  routerLinkActive="active">{{ 'Students' | translate: param }}</a>
+    <a [routerLink]="['/dashboard']| localize"  routerLinkActive="active">{{ 'Dashboard' | translate: param }}</a>
+    <ul>
+        <li class="btn btn-success" (click)="changeLanguage('en')">EN</li>
+        <li class="btn btn-success" (click)="changeLanguage('es')">ES</li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

@@ -1,17 +1,15 @@
 import {Component} from '@angular/core';
+import {LocalizeRouterService} from 'localize-router';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <div class="row">
-            <h1>{{'APLICATION_NAME' | translate}}</h1>
-            <a [routerLink]="['/students']| localize"  routerLinkActive="active">{{ 'STUDENTS' | translate: param }}</a>
-            <a [routerLink]="['/dashboard']| localize"  routerLinkActive="active">{{ 'DASHBOARD' | translate: param }}</a>
-            <router-outlet></router-outlet>
-        </div>
-    `,
+    templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
+    constructor(private localize: LocalizeRouterService) {}
+    changeLanguage(lang: string) {
+        this.localize.changeLanguage(lang);
+    }
 }

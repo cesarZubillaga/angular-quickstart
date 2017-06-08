@@ -9,11 +9,9 @@ import {DashboardComponent}  from './dashboard/dashboard.component';
 import {StudentComponent}  from './student/student.component';
 import {StudentDetailComponent} from './student/student-detail.component';
 import {StudentListComponent} from './student/student-list.component';
+import {LocalizeRouterModule} from 'localize-router';
 import {StudentService} from './student/student.service';
 import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app-routing.module';
-import {LocalizeRouterModule} from 'localize-router';
-import {LanguageComponent} from './language.component';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -64,7 +62,6 @@ const routes: Routes = [
         StudentComponent,
         StudentDetailComponent,
         StudentListComponent,
-        LanguageComponent,
         DashboardComponent
     ],
     bootstrap: [

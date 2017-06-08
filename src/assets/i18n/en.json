@@ -1,7 +1,13 @@
 {
-  "STUDENTS": "Students",
-  "DASHBOARD": "Dashboard",
+  "Students": "Students",
+  "Dashboard": "Dashboard",
   "APLICATION_NAME": "Aplication",
+  "Name" : "Name",
+  "Email" : "Email",
+  "Score" : "Score",
+  "Action" : "Action",
+  "View": "View",
+  "Back": "Back",
   "ROUTES.dashboard": "dashboard",
   "ROUTES.students": "students"
 }

@@ -6,7 +6,6 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class StudentComponent implements OnInit {
-    title = 'Students';
     ngOnInit(): void {
         console.log('ngOnInit StudentsComponent');
     }

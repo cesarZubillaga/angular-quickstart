@@ -1,10 +1,11 @@
+<h2>{{'Students' | translate }}</h2>
 <table class="table">
     <tr>
         <th>#</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Score</th>
-        <th>Action</th>
+        <th>{{'Name' | translate}}</th>
+        <th>{{'Email' | translate}}</th>
+        <th>{{'Score' | translate}}</th>
+        <th>{{'Action' | translate}}</th>
     </tr>
     <tr *ngFor="let student of students" class.selected="student === selectedStudent">
         <td>{{student.id}}</td>
@@ -12,7 +13,7 @@
         <td>{{student.email }}</td>
         <td>{{student.score}}</td>
         <td>
-            <a class="btn btn-success" [routerLink]="['/students', student.id] | localize " >View</a>
+            <a class="btn btn-success" [routerLink]="['/students', student.id] | localize " routerLinkActive="active">{{'View' | translate}}</a>
         </td>
     </tr>
 </table>

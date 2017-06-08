@@ -1,9 +1,7 @@
-<div class="col-xs-12">
-    <div *ngIf="student">
-        <h3>{{student.name}}</h3>
-        <div>
-            <p>{{student.id}} {{student.name}} {{student.email}} {{student.score}}</p>
-        </div>
-        <button (click)="goBack()">Back</button>
+<div *ngIf="student">
+    <h3>{{student.name}}</h3>
+    <div>
+        <p>{{student.id}} {{student.name}} {{student.email}} {{student.score}}</p>
     </div>
+<p><button class="btn btn-success" (click)="goBack()">{{'Back' | translate}}</button></p>
 </div>
