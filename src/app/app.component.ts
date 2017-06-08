@@ -4,9 +4,9 @@ import {Component} from '@angular/core';
     selector: 'my-app',
     template: `
         <div class="row">
-            <h1>{{title}}</h1>
-            <a [routerLink]="['/students']"  routerLinkActive="active">{{ 'students' | translate: param }}</a>
-            <a routerLink="/dashboard"  routerLinkActive="active">{{ 'dashboard' | translate: param }}</a>
+            <h1>{{'APLICATION_NAME' | translate}}</h1>
+            <a [routerLink]="['/students']| localize"  routerLinkActive="active">{{ 'STUDENTS' | translate: param }}</a>
+            <a [routerLink]="['/dashboard']| localize"  routerLinkActive="active">{{ 'DASHBOARD' | translate: param }}</a>
             <router-outlet></router-outlet>
         </div>
     `,
@@ -14,5 +14,4 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'Aplication';
 }

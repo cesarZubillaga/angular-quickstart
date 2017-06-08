@@ -1,4 +1,7 @@
 {
-  "students": "Students",
-  "dashboard": "Dashboard"
+  "STUDENTS": "Students",
+  "DASHBOARD": "Dashboard",
+  "APLICATION_NAME": "Aplication",
+  "ROUTES.dashboard": "dashboard",
+  "ROUTES.students": "students"
 }

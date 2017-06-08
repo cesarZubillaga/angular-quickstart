@@ -1,4 +1,5 @@
 import {NgModule}      from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule}   from '@angular/forms'; // <-- NgModel lives here
 import {HttpModule, Http} from '@angular/http';
@@ -11,12 +12,34 @@ import {StudentListComponent} from './student/student-list.component';
 import {StudentService} from './student/student.service';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
+import {LocalizeRouterModule} from 'localize-router';
 import {LanguageComponent} from './language.component';
-import {Http} from '@angular/http';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
 }
+const routes: Routes = [
+    {
+        path: 'students',
+        component: StudentComponent,
+        children: [
+            {
+                path: ':id',
+                component: StudentDetailComponent
+            },
+        ]
+    },
+    {
+        path: 'dashboard',
+        component: DashboardComponent
+    },
+    {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+    }
+];
+
 
 @NgModule({
     imports: [
@@ -30,7 +53,8 @@ export function HttpLoaderFactory(http: Http) {
                 deps: [Http]
             }
         }),
-        AppRoutingModule,
+        LocalizeRouterModule.forRoot(routes),
+        RouterModule.forRoot(routes)
     ],
     providers: [
         StudentService

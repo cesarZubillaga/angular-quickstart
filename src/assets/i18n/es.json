@@ -1,4 +1,7 @@
 {
-  "students": "Estudiantes",
-  "dashboard": "Panel de Control"
+  "STUDENTS": "Estudiantes",
+  "DASHBOARD": "Panel de Control",
+  "APLICATION_NAME": "Aplicación",
+  "ROUTES.dashboard": "panel-de-control",
+  "ROUTES.students": "estudiantes"
 }

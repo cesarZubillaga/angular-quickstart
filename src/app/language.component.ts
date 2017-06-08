@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {TranslateService} from  '@ngx-translate/core';
 import {Subscription} from 'rxjs/Subscription';
-
+// todo: maybe delete this file
 @Component({
     template: '<router-outlet></router-outlet>'
 })
@@ -11,7 +11,7 @@ export class LanguageComponent implements OnInit {
     private subscription: Subscription;
     constructor(private activatedRoute: ActivatedRoute, private translateService: TranslateService) {
         this.translateService.addLangs(['en', 'es']);
-        this.translateService.setDefaultLang('en');
+        this.translateService.setDefaultLang('es');
     }
 
     ngOnInit() {
